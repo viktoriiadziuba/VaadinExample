@@ -1,15 +1,11 @@
 package com.example;
 
 
-import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.Component;
-import com.vaadin.flow.component.ComponentEventListener;
-import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
-import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -67,13 +63,6 @@ public class MyUI extends VerticalLayout {
 		setSpacing(false);
 		setPadding(false);
 		add(sideMenu, header, workspace, footer);
-	}
-	private Button createMenuOption(String title) {
-		Button m1 = new Button(title);
-		m1.setWidth("100%");
-		m1.addClickListener(ev -> m1.getElement().getParent().getStyle().set("left", "-1000px"));
-		m1.addClickListener(ev -> Notification.show("Button " + title + " clicked."));
-		return m1;
 	}
 
 	private Component createCard() {

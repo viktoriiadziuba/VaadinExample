@@ -19,25 +19,25 @@ public class SignIn extends VerticalLayout {
 	
 	public SignIn() {
 		// HEADER
-				Span title = new Span("My application");
-				Tab createUser = new Tab(VaadinIcon.RECORDS.create(), new RouterLink("Sign up", SignUp.class));	
-				HorizontalLayout header = new HorizontalLayout(title, createUser);
-				header.expand(title);
-				header.setPadding(true);
-				header.setWidth("100%");
+		Span title = new Span("My application");
+		Tab createUser = new Tab(VaadinIcon.RECORDS.create(), new RouterLink("Sign up", SignUp.class));	
+		HorizontalLayout header = new HorizontalLayout(title, createUser);
+		header.expand(title);
+		header.setPadding(true);
+		header.setWidth("100%");
 
-				// WORKSPACE
-				VerticalLayout workspace = new VerticalLayout(signIn());
-				workspace.addClassName("workspace");
-				workspace.setSizeFull();
+		// WORKSPACE
+		VerticalLayout workspace = new VerticalLayout(signIn());
+		workspace.addClassName("workspace");
+		workspace.setSizeFull();
 				
 				
-				// CONTAINER
-				setSizeFull();
-				setMargin(false);
-				setSpacing(false);
-				setPadding(false);
-				add(header, workspace);
+		// CONTAINER
+		setSizeFull();
+		setMargin(false);
+		setSpacing(false);
+		setPadding(false);
+		add(header, workspace);
 				
 				
 	}
